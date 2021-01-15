@@ -1,10 +1,7 @@
-// reducer types
-import { ADD_USER, DELETE_USER } from "./user.type";
-
 // Redux Action to add new user
 export const addUserAction = ({ name, email }) => {
   return {
-    type: ADD_USER,
+    type: "ADD_USER",
     payload: { name, email, id: `${Math.random()}` },
   };
 };
@@ -12,7 +9,7 @@ export const addUserAction = ({ name, email }) => {
 // Redux Action to delete existing user
 export const deleteUserAction = (userID) => {
   return {
-    type: DELETE_USER,
+    type: "DELETE_USER",
     payload: userID,
   };
 };

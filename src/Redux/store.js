@@ -1,13 +1,6 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore } from "redux";
 import rootReducer from "./reducer/rootReducer";
 
-const INITIAL_STATE = {};
-const middleware = [];
-
-const store = createStore(
-  rootReducer,
-  INITIAL_STATE,
-  applyMiddleware(...middleware)
-);
+const store = createStore(rootReducer);
 
 export default store;

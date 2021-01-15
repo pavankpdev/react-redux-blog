@@ -1,18 +1,15 @@
-// reducer types
-import { ADD_USER, DELETE_USER } from "./user.type";
-
 const INITIAL_STATE = {
   user: [],
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case ADD_USER:
+    case "ADD_USER":
       return {
         ...state,
         user: [...state.user, action.payload],
       };
-    case DELETE_USER:
+    case "DELETE_USER":
       return {
         ...state,
         user: state.user.filter(({ id }) => id !== action.payload),
