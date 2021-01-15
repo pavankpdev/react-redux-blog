@@ -1,18 +1,27 @@
+// Library
 import React, { useState } from "react";
 import { Button, FormGroup, Label, Input } from "reactstrap";
+import { useDispatch } from "react-redux";
+
+// Redux Action
+import { addUserAction } from "../Redux/reducer/user/user.action";
 
 const AddUser = () => {
   const [userData, setUserData] = useState({
-    fullname: "",
+    name: "",
     email: "",
   });
+
+  // Initialize dispatch hook from react-redux
+  const dispatch = useDispatch();
 
   const updateInputData = (e) =>
     setUserData({ ...userData, [e.target.name]: e.target.value });
 
   const submit = () => {
+    dispatch(addUserAction(userData));
     setUserData({
-      fullname: "",
+      name: "",
       email: "",
     });
   };
@@ -24,15 +33,15 @@ const AddUser = () => {
       </h1>
 
       <FormGroup>
-        <Label for="fullname" className="font-weight-600">
-          Fullname
+        <Label for="name" className="font-weight-600">
+          name
         </Label>
         <Input
-          type="fullname"
-          name="fullname"
-          id="fullname"
-          value={userData.fullname}
-          placeholder="fullname"
+          type="name"
+          name="name"
+          id="name"
+          value={userData.name}
+          placeholder="name"
           onChange={updateInputData}
         />
       </FormGroup>
