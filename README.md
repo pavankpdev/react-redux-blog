@@ -1,7 +1,7 @@
 # React Redux blog Source Code
 
 This project was built to explain **redux with react** in this blog post - 
-[title](https://www.example.com)
+[Simple Guide To Redux In React](https://pavanblogs.hashnode.dev/simple-guide-to-redux-in-react)
 
 ## Install this project
 
@@ -14,3 +14,5 @@ This project was built to explain **redux with react** in this blog post -
 ## Run this app
 
 - `npm start`
+
+#### Thank you for your support, consider starring the repo and sharing the blog with your friends. 
