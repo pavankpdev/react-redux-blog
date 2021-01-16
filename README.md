@@ -17,4 +17,4 @@ This project was built to explain **redux with react** in this blog post -
 
 - `npm start`
 
-#### Thank you for your support, consider starring the repo and sharing the blog with your friends. 
+#### Thank you for your support, please star the repo and sharing the blog with your friends. 
